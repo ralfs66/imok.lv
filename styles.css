@@ -1,0 +1,282 @@
+/* Modern Enterprise Theme */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --success: #059669;
+    --danger: #dc2626;
+    --warning: #d97706;
+    --background: #f8fafc;
+    --card-bg: #ffffff;
+}
+
+body {
+    background-color: var(--background);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Card Enhancements */
+.bg-white {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.bg-white:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+/* Button Styles */
+button {
+    transition: all 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Input Enhancements */
+input {
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Status Indicators */
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.status-online {
+    background-color: var(--success);
+    color: white;
+}
+
+.status-offline {
+    background-color: var(--danger);
+    color: white;
+}
+
+/* Toggle Switch Refinements */
+.toggle-checkbox:checked {
+    transform: translateX(100%);
+    border-color: var(--success);
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: var(--success);
+}
+
+.toggle-label {
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Code Blocks */
+code, pre {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-family: 'SF Mono', Monaco, Consolas, monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-width: 100%;
+    padding: 0.75rem;
+}
+
+/* Device Status Grid */
+.grid-cols-2 {
+    gap: 1rem;
+    align-items: center;
+}
+
+.grid-cols-2 > div {
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Loading Animation Enhancement */
+.animate-spin {
+    border-color: var(--primary);
+    border-right-color: transparent;
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 1.875rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Enterprise Header */
+.container > div:first-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Result Section Enhancement */
+#result {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+/* Copy Button Enhancement */
+button.text-blue-500 {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+button.text-blue-500:hover {
+    background-color: rgba(37, 99, 235, 0.1);
+}
+
+/* Mobile-first container */
+.container {
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+/* Consistent button styles */
+button {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    height: 48px; /* Consistent height */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Input consistency */
+input {
+    height: 48px; /* Consistent height */
+    font-size: 1rem;
+    width: 100%;
+}
+
+/* Status grid improvements */
+.grid-cols-2 > div {
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+    .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .text-right {
+        text-align: left;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .grid-cols-2 > div:nth-child(even) {
+        padding-left: 0;
+    }
+    
+    input, button {
+        width: 100%;
+    }
+}
+
+/* Copy button and URL display improvements */
+.url-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.url-container code {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+@media (max-width: 480px) {
+    .url-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Logo hover effect */
+a h1, a h2 {
+    transition: color 0.2s ease;
+}
+
+a:hover h1 {
+    color: var(--primary);
+}
+
+/* Setup examples section */
+.setup-example {
+    overflow-x: auto;
+    max-width: 100%;
+    margin: 1rem 0;
+}
+
+.setup-example pre {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.setup-example code {
+    font-family: Consolas, Monaco, 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    display: block;
+    white-space: pre;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+    .setup-example pre {
+        padding: 0.75rem;
+    }
+    .setup-example code {
+        font-size: 0.85rem;
+    }
+} 
